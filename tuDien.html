@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>Nhập Từ: </span>
+<input type="text" id="string">
+<button onclick="change()">Dịch</button>
+<p id="result">
+<script>
+    function change(){
+        // or
+        let arr_en = ["apple","banana","or"];
+        let arr_vi = ["táo","chuối","hay"];
+        let str = document.getElementById("string").value;
+        let index_en = 0;
+        let result = "";
+        for ( let i = 0; i < arr_en.length; i++){
+            if (str == arr_en[i]){
+                index_en = i;//2
+                // console.log(index_en)
+                for (let j =0; j < arr_vi.length; j++){
+                    if (index_en == j){
+                        result = arr_vi[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML= result;
+    }
+</script>
+</body>
+</html>
